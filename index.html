@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/cfe9cd678d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Users/LauraEmilia/Desktop/weather-app/resources/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--FAVICON-->
+  <link rel="shortcut icon" type="image/jpg" href="/Users/LauraEmilia/Desktop/weather-app/resources/apple-icon.png"/>
+</head>
+
+<body>
+  
+  <!---------HEADER--------------------->
+
+  <div class="header">
+    <h1>
+       Weather App
+    </h1><img class="ash" src="/Users/LauraEmilia/Desktop/weather-app/resources/ashandpikachu.png" alt="ash and pikachu"/>
+  </div>
+
+  <!-------------MAIN------------------->
+  
+  <div class="main">
+
+    <p class="timeanddate">
+      Tue 16 Feb 5:09:44 PM
+    </p>
+
+    <h2 class="city">
+      Barcelona
+    </h2>
+
+    <h2 class="description">
+      Cloudy⛅️
+    </h2>
+
+    <h3 class="degrees">
+      19ºC
+    </h3>
+
+    <!------COLUMNN------------>
+
+    <div class="row">
+      <div class="column">
+        Wed 
+        <img class="weather-icon" 
+        src="/Users/LauraEmilia/Desktop/weather-app/resources/cloudy.png">
+        12°C
+      </div>
+
+      <div class="column">
+        Thu
+        <img class="weather-icon" src="/Users/LauraEmilia/Desktop/weather-app/resources/rainy.png">
+        10°C
+      </div>
+
+      <div class="column">
+        Fri
+        <img class="weather-icon" src="/Users/LauraEmilia/Desktop/weather-app/resources/sunny.png">
+        14°C
+      </div>
+
+    </div>
+
+    <!---------------------->
+
+    <form id="search-city">
+      <input type="text"
+      placeholder="Enter Your City"
+      autofocus="on"
+      autocomplete="off"
+      id="search-input"/>
+      <input id="search-button" type="submit" value="Search" />
+    </form>
+
+    <button id="location">
+      📍
+    </button>
+
+    <button id="fahrenheit">
+      ºF
+    </button>
+
+    <button id="celsius">
+     ºC
+    </button>
+
+  </div>
+
+  <!------------FOOTER------------------>
+  
+  <footer>
+    <p class="codedby">
+      Coded by Laura Emilia Barojas 2021
+    </p>
+  </footer>
+
+  <!--JAVASCRIPT LINK-->
+
+  <script
+   src="/Users/LauraEmilia/Desktop/weather-app/resources/js/index.js">
+  </script>
+
+</body>
+</html>

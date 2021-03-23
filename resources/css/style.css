@@ -1,0 +1,230 @@
+/* STYLE CSS */
+body {
+  background-image: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+  background-repeat: no-repeat;
+}
+
+/*------- HEADER ------*/
+
+.header {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+h1 {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: hsl(188, 55%, 28%);
+  font-size: 47px;
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.ash {
+  text-align: center;
+  margin: 0 auto;
+  display: inline;
+  height: 50px;
+}
+
+/* ---------MAIN -----------------*/
+
+.main {
+  background-image: url("/Users/LauraEmilia/Desktop/weather-app/resources/gameboy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 483px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.timeanddate {
+  font-family: "Roboto Mono", monospace;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 74px;
+  color: #9fdae1;
+}
+
+.city {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+  display: inline;
+  text-align: center;
+  position: relative;
+  right: 30px;
+  top: 97px;
+}
+
+.description {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+  display: inline;
+  text-align: center;
+  position: relative;
+  left: 36px;
+  top: 97px;
+}
+
+.degrees {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 120px;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: #20656f;
+}
+
+/*COLUMN---------*/
+.column {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  display: inline-table;
+  position: relative;
+  top: 144px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: "Press Start 2P";
+  font-size: 15px;
+}
+
+.weather-icon {
+  height: 50px;
+  display: block;
+}
+
+/*----------SEARCH AREA-------------*/
+
+form,
+input {
+  text-align: center;
+  margin: 0 auto;
+  display: inline;
+  position: relative;
+  top: 88px;
+}
+
+input {
+  border: white solid 5px;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-button {
+  background-color: #9fdae1;
+  border: #9fdae1 solid 5px;
+  color: #20656f;
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+}
+
+#search-button:hover {
+  cursor: pointer;
+}
+
+#search-button:focus {
+  outline: none;
+}
+
+/*--Location button---*/
+
+#location {
+  color: black;
+  font-family: "ROBOTO MONO";
+  font-size: 29px;
+  font-weight: bolder;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: 122px;
+  left: 260px;
+  border: solid #ee509c;
+  background-color: white;
+  border-radius: 25px;
+}
+
+#location:focus {
+  outline: 0;
+}
+
+#location:hover {
+  cursor: pointer;
+}
+
+/*----Fahrenheit and Celsius-----*/
+/*Fahrenheit (color:#43bdd0) and Celsius (color:#eae72c)*/
+
+#fahrenheit {
+  background-color: #43bdd0;
+  color: black;
+  font-family: "ROBOTO MONO";
+  font-size: 27px;
+  font-weight: bolder;
+  border: 10px solid #43bdd0;
+  border-radius: 100%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: 57px;
+  left: 255px;
+}
+
+#fahrenheit:focus {
+  outline: 0;
+}
+
+#fahrenheit:hover {
+  cursor: pointer;
+}
+
+#celsius {
+  background-color: #eae72c;
+  color: black;
+  font-family: "ROBOTO MONO";
+  font-size: 27px;
+  font-weight: bolder;
+  border: 11px solid #eae72c;
+  border-radius: 100%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: 140px;
+  left: 328px;
+}
+
+#celsius:focus {
+  outline: 0;
+}
+
+#celsius:hover {
+  cursor: pointer;
+}
+/* ------------FOOTER-------------------- */
+
+.codedby {
+  font-family: "Roboto Mono";
+  font-size: 15px;
+  color: #1f616a;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
