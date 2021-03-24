@@ -38,7 +38,7 @@ h1 {
 /* ---------MAIN -----------------*/
 
 .main {
-  background-image: url("/resources/gameboy.png");
+  background-image: url("resources/gameboy.png");
   background-position: center;
   background-repeat: no-repeat;
   height: 483px;
