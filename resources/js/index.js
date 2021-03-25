@@ -23,9 +23,12 @@ timeanddate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}:${seconds}`
 
 function displayWeatherCondition(response){
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".description").innerHTML = response.data.weather[0].main;
-  let temp = Math.round(response.data.main.temp);
-  document.querySelector(".degrees").innerHTML = `${temp}ºC`
+  document.querySelector(".description").innerHTML = response.data.weather[0].description;
+  let temperatureElement = document.querySelector(".degrees")
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round (celsiusTemperature);
+  let temperatureUnit = document.querySelector(".units");
+  temperatureUnit.innerHTML = `ºC`
 }
 
 function search(city){
@@ -40,12 +43,39 @@ function submitEvent(event){
   search(city);
 }
 
+function displayFahrenheitTemperature (event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".degrees");
+  let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let fahrenheitUnit = document.querySelector(".units");
+  fahrenheitUnit.innerHTML = `ºF`;
+}
+
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".degrees");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let celsiusUnit = document.querySelector(".units");
+  celsiusUnit.innerHTML = `ºC`; 
+}
+
+let celsiusTemperature = null;
+
 search("Barcelona");
 
 let searchForm = document.querySelector("#search-city");
 searchForm.addEventListener("submit", submitEvent);
 
+let fahrenheitButton = document.querySelector("#fahrenheit");
+fahrenheitButton.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusButton = document.querySelector("#celsius");
+celsiusButton.addEventListener("click", displayCelsiusTemperature);
+
+
 // Get the current location ---------//
+
 function getCurrentLocation(event){
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
@@ -60,7 +90,7 @@ function searchLocation(position){
 let currentLocationButton = document.querySelector("#location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//testinggithub
+
 
 
 

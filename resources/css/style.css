@@ -7,8 +7,6 @@ body {
     #e3eeff 100%
   );
   background-repeat: no-repeat;
-  min-width: 846px;
-  min-height: 589px;
 }
 
 /*------- TITLE ------*/
@@ -30,7 +28,7 @@ h1 {
   display: inline;
 }
 
-.ash {
+.pikachu {
   text-align: center;
   margin: 0 auto;
   display: inline;
@@ -61,24 +59,23 @@ h1 {
 
 .city {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 auto;
-  display: inline;
+  display: block;
   text-align: center;
   position: relative;
-  right: 30px;
-  top: 97px;
+  top: 94px;
 }
 
 .description {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0 auto;
-  display: inline;
+  display: block;
   text-align: center;
   position: relative;
-  left: 36px;
-  top: 97px;
+  top: 108px;
+  color: #20656f;
 }
 
 .degrees {
@@ -86,20 +83,33 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 120px;
+  top: 131px;
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 45px;
   color: #20656f;
+  right: 45px;
 }
 
-/*COLUMN---------*/
+.units {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 86px;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: #20656f;
+  left: 46px;
+}
+
+/*------EXTENDED FORECAST-----------*/
 .column {
   margin: 0 auto;
   display: block;
   text-align: center;
   display: inline-table;
   position: relative;
-  top: 144px;
+  top: 100px;
   margin-right: 15px;
   margin-left: 15px;
   font-family: "Press Start 2P";
@@ -119,7 +129,7 @@ input {
   margin: 0 auto;
   display: inline;
   position: relative;
-  top: 88px;
+  top: 64px;
 }
 
 input {
@@ -157,7 +167,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 122px;
+  bottom: 172px;
   left: 260px;
   border: solid #ee509c;
   background-color: white;
@@ -186,7 +196,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 57px;
+  bottom: 109px;
   left: 255px;
 }
 
@@ -209,7 +219,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 140px;
+  bottom: 192px;
   left: 328px;
 }
 
