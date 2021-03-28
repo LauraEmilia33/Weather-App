@@ -24,17 +24,44 @@ timeanddate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}:${seconds}`
 function displayWeatherCondition(response){
   document.querySelector(".city").innerHTML = response.data.name;
   document.querySelector(".description").innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
   let temperatureElement = document.querySelector(".degrees")
   celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round (celsiusTemperature);
   let temperatureUnit = document.querySelector(".units");
   temperatureUnit.innerHTML = `ºC`
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt",response.data.weather[0].description);
+
 }
+
+function displayForecast(response){
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
+  forecastElement.innerHTML = `
+     <div class="column">
+        12:00 
+        <img class="weather-icon" 
+        src="resources/cloudy.png">
+        <strong class="boldweather">${Math.round(forecast.main.temp_max)}º</strong>
+         ${Math.round(forecast.main.temp_min)}
+      </div>
+  `
+}
+
+
 
 function search(city){
   let apiKey = "95f162609dd8746fc4a9169098a143e3";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayWeatherCondition);
+
+  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
 }
 
 function submitEvent(event){
@@ -42,6 +69,10 @@ function submitEvent(event){
   let city = document.querySelector("#search-input").value;
   search(city);
 }
+
+//-----------------------------------------//
+
+//-----Change from Celsius to Fahrenheit and vice versa------//
 
 function displayFahrenheitTemperature (event){
   event.preventDefault();
@@ -60,6 +91,8 @@ function displayCelsiusTemperature(event){
   celsiusUnit.innerHTML = `ºC`; 
 }
 
+//----Global Variables----//
+
 let celsiusTemperature = null;
 
 search("Barcelona");
@@ -73,6 +106,12 @@ fahrenheitButton.addEventListener("click", displayFahrenheitTemperature);
 let celsiusButton = document.querySelector("#celsius");
 celsiusButton.addEventListener("click", displayCelsiusTemperature);
 
+//-------------------------------------------------------//
+
+//----CHANGE EMOJI----------------------//
+
+
+//--------------------------------------------------------//
 
 // Get the current location ---------//
 
