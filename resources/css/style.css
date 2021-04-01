@@ -1,11 +1,6 @@
 /* BACKGROUND */
 body {
-  background-image: linear-gradient(
-    to top,
-    #f3e7e9 0%,
-    #e3eeff 99%,
-    #e3eeff 100%
-  );
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
   background-repeat: no-repeat;
 }
 
@@ -47,14 +42,38 @@ h1 {
   display: block;
 }
 
-.timeanddate {
+.timeandday {
   font-family: "Roboto Mono", monospace;
   margin: 0 auto;
   display: block;
   text-align: center;
   position: relative;
-  top: 74px;
-  color: #9fdae1;
+  bottom: 14px;
+  color: #ba71ae;
+}
+
+.humidity-text {
+  font-family: "Roboto Mono", monospace;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 52px;
+  right: 40px;
+  color: white;
+  font-size: 15px;
+}
+
+.wind-text {
+  font-family: "Roboto Mono", monospace;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 52px;
+  left: 40px;
+  color: white;
+  font-size: 15px;
 }
 
 .city {
@@ -64,7 +83,7 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 94px;
+  top: 69px;
 }
 
 .description {
@@ -74,7 +93,7 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 108px;
+  top: 82px;
   color: #20656f;
 }
 
@@ -83,7 +102,7 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 131px;
+  top: 108px;
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 45px;
   color: #20656f;
@@ -95,11 +114,11 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 86px;
+  top: 62px;
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 45px;
   color: #20656f;
-  left: 94px;
+  left: 99px;
 }
 
 /*------ICON---------------*/
@@ -109,7 +128,7 @@ h1 {
   display: block;
   text-align: center;
   position: relative;
-  top: 10px;
+  bottom: 15px;
   right: 113px;
 }
 
@@ -120,11 +139,16 @@ h1 {
   text-align: center;
   display: inline-table;
   position: relative;
-  top: 100px;
+  bottom: 35px;
   margin-right: 15px;
   margin-left: 15px;
   font-family: "Roboto Mono", monospace;
   font-size: 14px;
+  border: red solid 5px;
+}
+
+.hour-one {
+  margin: 0 auto;
 }
 
 .boldweather {
@@ -140,13 +164,12 @@ h1 {
 
 /*----------SEARCH AREA-------------*/
 
-form,
-input {
+.form-div {
   text-align: center;
   margin: 0 auto;
   display: inline;
   position: relative;
-  top: 64px;
+  bottom: 14px;
 }
 
 input {
@@ -184,10 +207,10 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 172px;
-  left: 260px;
-  border: solid #ee509c;
-  background-color: white;
+  bottom: 312px;
+  left: 257px;
+  border: solid #43bdd0;
+  background-color: #43bdd0;
   border-radius: 25px;
 }
 
@@ -213,7 +236,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 109px;
+  bottom: 251px;
   left: 255px;
 }
 
@@ -236,7 +259,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 192px;
+  bottom: 334px;
   left: 328px;
 }
 

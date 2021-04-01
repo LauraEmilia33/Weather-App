@@ -30,10 +30,28 @@
   
   <div class="main">
 
-    <p class="timeanddate">
-      Tue 16 Feb 5:09:44 PM
+    <p class="timeandday">Last updated:
+      <span id="date">
+        hello
+      </span>
     </p>
-    
+
+    <p class="humidity-text">
+      Humidity:
+      <span class="humidity">
+        82
+      </span>
+      %
+    </p>
+
+    <p class="wind-text">
+      Wind:
+      <span class="wind">
+       32
+      </span>
+      km/h
+    </p>
+
     <h2 class="city">
       Barcelona
     </h2>
@@ -59,31 +77,31 @@
     <!------EXTENDED FORECAST----------->
 
     <div class="row" id="forecast"></div>
- <!--
+ 
 
-      <div class="column">
+    <!-- <div class="column">
         Thu
         <img class="weather-icon" src="resources/rainy.png">
         10°C
-      </div>
+    </div>
 
-      <div class="column">
+    <div class="column">
         Fri
         <img class="weather-icon" src="resources/sunny.png">
         14°C
-      </div>
-      -->
-
-    <!---------------------->
-
-    <form id="search-city">
-      <input type="text"
-      placeholder="Enter Your City"
-      autofocus="on"
-      autocomplete="off"
-      id="search-input"/>
-      <input id="search-button" type="submit" value="Search" />
-    </form>
+      </div>>
+   -->
+    
+    <div class="form-div">
+     <form id="search-city">
+       <input type="text"
+       placeholder="Enter Your City"
+       autofocus="on"
+       autocomplete="off"
+       id="search-input"/>
+       <input id="search-button" type="submit" value="Search" />
+      </form>
+    </div>
 
     <button id="location">
       📍
