@@ -31,14 +31,6 @@ timeanddate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}:${seconds}`
 
 function formatDate(timestamp){
  let date = new Date(timestamp);
- let hours = date.getHours();
-  if (hours < 10){
-   hours = `0${hours}`;
-  }
- let minutes = date.getMinutes();
- if (minutes < 10){
-   minutes = `0${minutes}`;
- }
  let days = [
   "Sunday",
   "Monday",
@@ -49,21 +41,21 @@ function formatDate(timestamp){
   "Saturday"
  ];
  let day = days[date.getDay()];
- return `${day} ${hours}:${minutes}`;
+ return `${day} ${formatHours(timestamp)}`;
 }
 
 
 function formatHours(timestamp){
-   let date = new Date(timestamp);
+ let date = new Date(timestamp);
  let hours = date.getHours();
-  if (hours < 10){
-   hours = `0${hours}`;
-  }
+ if (hours < 10) {
+  hours = `0${hours}`;
+ }
  let minutes = date.getMinutes();
- if (minutes < 10){
+ if (minutes < 10) {
    minutes = `0${minutes}`;
  }
-  return `${hours}:${minutes}`;
+ return `${hours}:${minutes}`;
 }
 
 
@@ -100,7 +92,7 @@ function displayForecast(response){
   forecastElement.innerHTML = `
     <div class="column">
       <h4 class="hour-one">
-      ${formatHours(forecast.dt * 1000)}
+       ${formatHours(forecast.dt * 1000)}
       </h4>
       <img class="weather-icon" 
       src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
@@ -109,11 +101,8 @@ function displayForecast(response){
       <strong class="boldweather">${Math.round(forecast.main.temp_max)}º</strong>
       ${Math.round(forecast.main.temp_min)}º
     </div>
-  `
-  console.log(".hour-one");
+  `;
 }
-
-
 
 function search(city){
   let apiKey = "95f162609dd8746fc4a9169098a143e3";
