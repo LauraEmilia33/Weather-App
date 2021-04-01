@@ -168,7 +168,7 @@ h1 {
   margin: 0 auto;
   display: inline;
   position: relative;
-  bottom: 14px;
+  bottom: 8px;
 }
 
 input {
@@ -235,7 +235,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 251px;
+  bottom: 242px;
   left: 255px;
 }
 
@@ -258,7 +258,7 @@ input:focus {
   margin: 0 auto;
   display: block;
   position: relative;
-  bottom: 334px;
+  bottom: 325px;
   left: 328px;
 }
 
