@@ -1,33 +1,4 @@
-// Time and Date
-
-/*let timeanddate = document.querySelector(".timeanddate");
-console.log(timeanddate);
-
-let now = new Date();
-
-let days = [
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat"
-];
-
-let months = ["Jan", "Feb", "Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-
-let day = days[now.getDay()];
-let date = now.getDate();
-let month = months[now.getMonth()];
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let seconds = now.getSeconds();
-
-timeanddate.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}:${seconds}`;
-*/
-
-//date since 1970 
+//-------TIME AND DATE----------//
 
 function formatDate(timestamp){
  let date = new Date(timestamp);
@@ -61,7 +32,8 @@ function formatHours(timestamp){
 
 //----------------------------------//
 
-//Change City & Temperature----------//
+//------CHANGE CITY AND TEMPERATURE----------//
+// -->Displays weather, humidity, wind, icon, etc.
 
 function displayWeatherCondition(response){
   document.querySelector(".city").innerHTML = response.data.name;
@@ -84,6 +56,9 @@ function displayWeatherCondition(response){
   iconElement.setAttribute("alt",response.data.weather[0].description);
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
 }
+
+//-------EXTENDED FORECAST----------//
+// -->Changes the innerHTML of the Extended Forecast.
 
 function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
@@ -108,6 +83,8 @@ function displayForecast(response){
  }
 }
 
+//-------CITY SEARCH----------//
+
 function search(city){
   let apiKey = "95f162609dd8746fc4a9169098a143e3";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -125,7 +102,7 @@ function submitEvent(event){
 
 //-----------------------------------------//
 
-//-----Change from Celsius to Fahrenheit and vice versa------//
+//-----UNIT CONVERSION-----//
 
 function displayFahrenheitTemperature (event){
   event.preventDefault();
@@ -144,7 +121,7 @@ function displayCelsiusTemperature(event){
   celsiusUnit.innerHTML = `ºC`; 
 }
 
-//----Global Variables----//
+//----GLOBAL VARIABLES----//
 
 let celsiusTemperature = null;
 
@@ -161,7 +138,7 @@ celsiusButton.addEventListener("click", displayCelsiusTemperature);
 
 //--------------------------------------------------------//
 
-// Get the current location ---------//
+// --- CURRENT LOCATION ---------//
 
 function getCurrentLocation(event){
   event.preventDefault();

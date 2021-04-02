@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/cfe9cd678d.js" crossorigin="anonymous"></script>
+    <!--CSS link-->
     <link rel="stylesheet" href="resources/css/style.css"/>
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <!--Axios Link-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--FAVICON-->
   <link rel="shortcut icon" type="image/jpg" href="resources/apple-icon.png"/>
@@ -18,7 +22,7 @@
 
 <body>
   
-  <!---------TITLE--------------------->
+  <!---------H1-------------->
 
   <div class="header">
     <h1>
@@ -30,12 +34,14 @@
   
   <div class="main">
 
+    <!--Last Updated-->
     <p class="timeandday">Last updated:
       <span id="date">
         hello
       </span>
     </p>
-
+    
+    <!--Humidity-->
     <p class="humidity-text">
       Humidity:
       <span class="humidity">
@@ -43,7 +49,8 @@
       </span>
       %
     </p>
-
+    
+    <!--Wind-->
     <p class="wind-text">
       Wind:
       <span class="wind">
@@ -51,14 +58,18 @@
       </span>
       km/h
     </p>
-
+    
+    <!--City-->
     <h2 class="city">
       Barcelona
     </h2>
-
+    
+    <!--Weather Description-->
     <h2 class="description">
       Cloudy
     </h2>
+
+    <!--Icon/Degrees/Units-->
 
     <span class="degrees">
       19
@@ -74,24 +85,13 @@
       id="icon"
       />
     </span>
+
     <!------EXTENDED FORECAST----------->
 
     <div class="row" id="forecast"></div>
  
+    <!--------SEARCH FORM---------------->
 
-    <!-- <div class="column">
-        Thu
-        <img class="weather-icon" src="resources/rainy.png">
-        10°C
-    </div>
-
-    <div class="column">
-        Fri
-        <img class="weather-icon" src="resources/sunny.png">
-        14°C
-      </div>>
-    -->
-    
     <div class="form-div">
      <form id="search-city">
        <input type="text"
@@ -103,9 +103,13 @@
       </form>
     </div>
 
+    <!--Current Location Button-->
+
     <button id="location">
       📍
     </button>
+
+    <!--Conversion-->
 
     <button id="fahrenheit">
       ºF
@@ -121,7 +125,16 @@
   
   <footer>
     <p class="codedby">
-      Coded by Laura Emilia Barojas 2021
+      <a href="https://github.com/LauraEmilia33/weather-app"
+       target="_blank" alt="Github link">
+       Open Source
+      </a> 
+      by 
+      <a href="https://www.linkedin.com/in/laura-emilia-barojas/"
+      target="_blank" alt="LinkedIn link">
+        Laura Barojas
+      </a>
+      <img src="resources/me.png" width="15px" height="20px"/>
     </p>
   </footer>
 

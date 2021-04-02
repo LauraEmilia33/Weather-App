@@ -1,10 +1,12 @@
-/* BACKGROUND */
+/* BACKGROUND COLOR */
+
 body {
   background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
   background-repeat: no-repeat;
   overflow: hidden;
 }
-/*------- TITLE ------*/
+
+/*------- HEADER/ H1 ------*/
 
 .header {
   display: block;
@@ -35,6 +37,7 @@ h1 {
   display: block;
 }
 
+/* ------LAST UPDATED-------*/
 .timeandday {
   font-family: "Roboto Mono", monospace;
   margin: 0 auto;
@@ -45,6 +48,7 @@ h1 {
   color: #ba71ae;
 }
 
+/* ------HUMIDITY-------*/
 .humidity-text {
   font-family: "Roboto Mono", monospace;
   margin: 0 auto;
@@ -57,6 +61,7 @@ h1 {
   font-size: 15px;
 }
 
+/* ------WIND------*/
 .wind-text {
   font-family: "Roboto Mono", monospace;
   margin: 0 auto;
@@ -69,6 +74,7 @@ h1 {
   font-size: 15px;
 }
 
+/* ------CITY-------*/
 .city {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -79,6 +85,7 @@ h1 {
   top: 69px;
 }
 
+/* ------DESCRIPTION------*/
 .description {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 13px;
@@ -90,6 +97,7 @@ h1 {
   color: #20656f;
 }
 
+/* ------DEGREES------*/
 .degrees {
   margin: 0 auto;
   display: block;
@@ -114,7 +122,7 @@ h1 {
   left: 99px;
 }
 
-/*------ICON---------------*/
+/*------MAIN ICON---------------*/
 
 .main-icon {
   margin: 0 auto;
@@ -154,7 +162,7 @@ h1 {
   margin: 0 auto;
 }
 
-/*----------SEARCH AREA-------------*/
+/*----------SEARCH FORM-------------*/
 
 .form-div {
   text-align: center;
@@ -189,7 +197,7 @@ input:focus {
   outline: none;
 }
 
-/*--Location button---*/
+/*--CURRENT LOCATION BUTTON---*/
 
 #location {
   color: black;
@@ -214,8 +222,7 @@ input:focus {
   cursor: pointer;
 }
 
-/*----Fahrenheit and Celsius-----*/
-/*Fahrenheit (color:#43bdd0) and Celsius (color:#eae72c)*/
+/*----FAHRENHEIT AND CELSIUS--------*/
 
 #fahrenheit {
   background-color: #43bdd0;
